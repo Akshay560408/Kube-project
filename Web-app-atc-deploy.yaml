@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Web-App-atc
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: Web-App-atc
+  template:
+    metadata:
+      labels:
+        app: Web-App-atc
+    spec:
+      containers:
+      - name: Web-App-atc
+        image: nginx:latest
+        ports:
+        - containerPort: 80
