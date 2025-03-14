@@ -1,5 +1,5 @@
 # Use an official Nginx image as a base
-FROM nginx:alpine
+FROM nginx:1.27.4-alpine3.21-slim
 
 # Copy your static content to the Nginx HTML directory
 COPY ./index.html /usr/share/nginx/html/index.html
